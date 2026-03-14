@@ -1,8 +1,30 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import './App.css'
 import Particles from './Particles.jsx'
+import emailjs from "@emailjs/browser"
 
 function App() {
+
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs.sendForm(
+      "service_r5pigob",
+      "template_y2z9fkn",
+      form.current,
+      "3oyCRRjf7VVDXBl_y"
+    ).then(
+      () => {
+        alert("Message sent successfully!")
+      },
+      () => {
+        alert("Failed to send message")
+      }
+    )
+  }
+
   const [theme, setTheme] = useState('dark')
 
   useEffect(() => {
@@ -12,7 +34,6 @@ function App() {
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
   }
-
   return (
     <>
       <Particles />
@@ -54,11 +75,11 @@ function App() {
                 Contact Me
               </a>
               <a
-                href="/src/Ashish_Arsad_Resume.pdf"
-                className="btn ghost"
-                download
+               href="/Ashish_Arsad_Resume.pdf"
+               className="btn ghost"
+               download="Ashish_Arsad_Resume.pdf"
               >
-                Download Resume
+               Download Resume
               </a>
               <a href="#projects" className="btn ghost">
                 View Projects
@@ -77,7 +98,7 @@ function App() {
               🐱 Github: <span>github.com/Ashish2143</span>
             </p>
             <p className="hero-card-line">
-              💼 Portfolio: <span>   </span>
+              💼 Portfolio: <span>capable-pixie-9fd2d6.netlify.app</span>
             </p>
           </div>
         </section>
@@ -118,6 +139,11 @@ function App() {
               <span className="chip">React</span>
               <span className="chip">Node.js</span>
               <span className="chip">Android</span>
+            </div>
+            <h2>•	Database: </h2>
+            <div className="chip-row">
+              <span className="chip">My sql</span>
+              <span className="chip">MongoDB</span>
             </div>
             <h2>•	Tools : </h2>
             <div className="chip-row">
@@ -228,18 +254,25 @@ function App() {
               </div>
             </article>
             <article className="card">
-              <h3>Project Name 2</h3>
-              <p className="card-meta">Tech stack · React / Node / etc.</p>
+              <h3>AI-Code-Review</h3> 
+              <p className="card-meta"> Python</p>
               <p>
-                Another project description. Replace this text with your own
-                details.
+                “An AI-powered tool that automatically analyzes source code and provides suggestions to improve code quality, detect bugs, and enhance overall software performance.”
               </p>
               <div className="card-actions">
-                <a href="#" className="link">
+                <a href="https://github.com/Ashish2143/ai-code-review" className="link">
                   View Code
                 </a>
-                <a href="#" className="link">
-                  Live Demo
+              </div>
+            </article>
+            <article className="card">
+              <h3> Portfolio</h3> 
+              <p className="card-meta"> javascript</p>
+              <p>
+                  “A personal portfolio website showcasing my projects, skills, and development work with links to GitHub, LinkedIn, and contact information.”              </p>
+              <div className="card-actions">
+                <a href="https://github.com/Ashish2143/Portfolio" className="link">
+                  View Code
                 </a>
               </div>
             </article>
@@ -268,39 +301,56 @@ function App() {
                 </li>
                 <li>
                   🐱 GitHub:{' '}
-                  <a href="#https://github.com/Ashish2143" target="_blank" rel="noreferrer">
+                  <a href="https://github.com/Ashish2143" target="_blank" rel="noreferrer">
                    Ashish2143
                   </a>
                 </li>
                 <li>
                   💼 Portfolio:{' '}
-                  <a href="#https://github.com/Ashish2143" target="_blank" rel="noreferrer">
+                  <a href="capable-pixie-9fd2d6.netlify.app" target="_blank" rel="noreferrer">
                    Ashish Pravin Arsad
                   </a>
                 </li>
               </ul>
             </div>
-            <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-              <div className="form-row">
-                <label htmlFor="name">Name</label>
-                <input id="name" placeholder="Enter your name" />
-              </div>
-              <div className="form-row">
-                <label htmlFor="email">Email</label>
-                <input id="email" placeholder="Enter your email" />
-              </div>
-              <div className="form-row">
-                <label htmlFor="message">Message</label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  placeholder="Write your message here"
-                />
-              </div>
-              <button className="btn primary" type="submit">
-                Send Message
-              </button>
-            </form>
+            <form ref={form} className="contact-form" onSubmit={sendEmail}>
+  <div className="form-row">
+    <label htmlFor="name">Name</label>
+    <input
+      type="text"
+      name="user_name"
+      id="name"
+      placeholder="Enter your name"
+      required
+    />
+  </div>
+
+  <div className="form-row">
+    <label htmlFor="email">Email</label>
+    <input
+      type="email"
+      name="user_email"
+      id="email"
+      placeholder="Enter your email"
+      required
+    />
+  </div>
+
+  <div className="form-row">
+    <label htmlFor="message">Message</label>
+    <textarea
+      name="message"
+      id="message"
+      rows={4}
+      placeholder="Write your message here"
+      required
+    />
+  </div>
+
+  <button className="btn primary" type="submit">
+    Send Message
+  </button>
+</form>
           </div>
         </section>
       </main>
