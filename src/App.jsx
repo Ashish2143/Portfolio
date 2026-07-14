@@ -98,7 +98,7 @@ function App() {
               🐱 Github: <span>github.com/Ashish2143</span>
             </p>
             <p className="hero-card-line">
-              💼 Portfolio: <span>capable-pixie-9fd2d6.netlify.app</span>
+              💼 Portfolio: <span>ashisharsad-portfolio.netlify.app</span>
             </p>
           </div>
         </section>
@@ -124,32 +124,40 @@ function App() {
             <h2>Skills</h2>
           </div>
           <div className="skills-grid">
-            <h2>•	Programming Languages :</h2>
-            <div className="chip-row">
-              <span className="chip">C</span>
-              <span className="chip">C++</span>
-              <span className="chip">Python</span>
-              <span className="chip">Java</span>
+            <div className="skills-category">
+              <h3>Programming Languages</h3>
+              <div className="chip-row">
+                <span className="chip">C</span>
+                <span className="chip">C++</span>
+                <span className="chip">Python</span>
+                <span className="chip">Java</span>
+              </div>
             </div>
-           <h2>•	Development :</h2>
-            <div className="chip-row">
-              <span className="chip">HTML</span>
-              <span className="chip">CSS</span>
-              <span className="chip">JavaScript</span>
-              <span className="chip">React</span>
-              <span className="chip">Node.js</span>
-              <span className="chip">Android</span>
+            <div className="skills-category">
+              <h3>Development</h3>
+              <div className="chip-row">
+                <span className="chip">HTML</span>
+                <span className="chip">CSS</span>
+                <span className="chip">JavaScript</span>
+                <span className="chip">React</span>
+                <span className="chip">Node.js</span>
+                <span className="chip">Android</span>
+              </div>
             </div>
-            <h2>•	Database: </h2>
-            <div className="chip-row">
-              <span className="chip">My sql</span>
-              <span className="chip">MongoDB</span>
+            <div className="skills-category">
+              <h3>Database</h3>
+              <div className="chip-row">
+                <span className="chip">MySQL</span>
+                <span className="chip">MongoDB</span>
+              </div>
             </div>
-            <h2>•	Tools : </h2>
-            <div className="chip-row">
-              <span className="chip">Vs Code</span>
-              <span className="chip">Android Studio</span>
-              <span className="chip">GitHub</span>
+            <div className="skills-category">
+              <h3>Tools</h3>
+              <div className="chip-row">
+                <span className="chip">VS Code</span>
+                <span className="chip">Android Studio</span>
+                <span className="chip">GitHub</span>
+              </div>
             </div>
           </div>
         </section>
@@ -242,40 +250,62 @@ function App() {
           <div className="card-grid">
             <article className="card">
               <h3>TimeTable Generation</h3>
-              <p className="card-meta">HTML,CSS,JSP</p>
+              <div className="card-tags">
+                <span className="card-tag">HTML</span>
+                <span className="card-tag">CSS</span>
+                <span className="card-tag">JSP</span>
+              </div>
               <p>
                 TimeTable-Generator is a web-based application that automatically generates a clash-free timetable based on selected subjects, sections, and preferred time slots.
               </p>
               <div className="card-actions">
-                <a href="https://github.com/Ashish2143/TimeTable-Generator" className="link">
+                <a href="https://github.com/Ashish2143/TimeTable-Generator" target="_blank" rel="noreferrer" className="link">
                   View Code
                 </a>
-                
               </div>
             </article>
             <article className="card">
-              <h3>AI-Code-Review</h3> 
-              <p className="card-meta"> Python</p>
+              <h3>Smart Hiring</h3> 
+              <div className="card-tags">
+                <span className="card-tag">Java</span>
+                <span className="card-tag">Spring Boot</span>
+                <span className="card-tag">React</span>
+                <span className="card-tag">MySQL</span>
+              </div>
               <p>
-                “An AI-powered tool that automatically analyzes source code and provides suggestions to improve code quality, detect bugs, and enhance overall software performance.”
+                “A web-based recruitment and hiring platform designed to streamline candidate screening, automate resume parsing, and manage applicant tracking efficiently.”
               </p>
               <div className="card-actions">
-                <a href="https://github.com/Ashish2143/ai-code-review" className="link">
+                <a href="https://github.com/Ashish2143/smarthire" target="_blank" rel="noreferrer" className="link">
                   View Code
+                </a>
+                <a href="https://smarthire.up.railway.app" target="_blank" rel="noreferrer" className="link">
+                  Live Demo
                 </a>
               </div>
             </article>
             <article className="card">
-              <h3> Portfolio</h3> 
-              <p className="card-meta"> javascript</p>
+              <h3>Portfolio</h3> 
+              <div className="card-tags">
+                <span className="card-tag">JavaScript</span>
+              </div>
               <p>
-                  “A personal portfolio website showcasing my projects, skills, and development work with links to GitHub, LinkedIn, and contact information.”              </p>
+                “A personal portfolio website showcasing my projects, skills, and development work with links to GitHub, LinkedIn, and contact information.”
+              </p>
               <div className="card-actions">
-                <a href="https://github.com/Ashish2143/Portfolio" className="link">
+                <a href="https://github.com/Ashish2143/Portfolio" target="_blank" rel="noreferrer" className="link">
                   View Code
+                </a>
+                <a href="https://ashisharsad-portfolio.netlify.app" target="_blank" rel="noreferrer" className="link">
+                  Live Demo
                 </a>
               </div>
             </article>
+          </div>
+          <div className="projects-footer">
+            <a href="https://github.com/Ashish2143?tab=repositories" target="_blank" rel="noreferrer" className="btn ghost">
+              View All Projects on GitHub
+            </a>
           </div>
         </section>
 
@@ -288,27 +318,27 @@ function App() {
             <div>
               <ul className="contact-list">
                 <li>
-                  📧Email:{' '}
-                  <a href="ashisharsad9307@gmail.com">
+                  📧 Email:{' '}
+                  <a href="mailto:ashisharsad9307@gmail.com">
                     ashisharsad9307@gmail.com
                   </a>
                 </li>
                 <li>
-                  🔗LinkedIn:{''}
+                  🔗 LinkedIn:{' '}
                   <a href="https://www.linkedin.com/in/ashisharsad2143/" target="_blank" rel="noreferrer">
-                  ashisharsad2143
+                    ashisharsad2143
                   </a>
                 </li>
                 <li>
                   🐱 GitHub:{' '}
                   <a href="https://github.com/Ashish2143" target="_blank" rel="noreferrer">
-                   Ashish2143
+                    Ashish2143
                   </a>
                 </li>
                 <li>
                   💼 Portfolio:{' '}
-                  <a href="capable-pixie-9fd2d6.netlify.app" target="_blank" rel="noreferrer">
-                   Ashish Pravin Arsad
+                  <a href="https://ashisharsad-portfolio.netlify.app" target="_blank" rel="noreferrer">
+                    ashisharsad-portfolio.netlify.app
                   </a>
                 </li>
               </ul>
